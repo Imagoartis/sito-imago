@@ -1,0 +1,72 @@
+code
+Html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imago Artis Edizioni | Cultura e Territorio</title>
+    <!-- Font Eleganti -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #FDFBF7; color: #1A1A1A; }
+        h1, h2, h3 { font-family: 'EB Garamond', serif; color: #A20B10; }
+        .bg-bordeaux { background-color: #A20B10; }
+        .text-bordeaux { color: #A20B10; }
+        .border-gold { border-color: #B58D3D; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigazione -->
+    <nav class="p-6 flex justify-between items-center border-b border-gray-200">
+        <div class="text-2xl font-bold text-bordeaux tracking-widest">IMAGO ARTIS</div>
+        <div class="space-x-8 uppercase text-xs tracking-widest pt-2">
+            <a href="#" class="hover:text-red-800">Catalogo</a>
+            <a href="#" class="hover:text-red-800">Autori</a>
+            <a href="#" class="hover:text-red-800">Territorio</a>
+            <a href="#" class="hover:text-red-800 font-bold">Inviaci Manoscritto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-20 px-10 text-center bg-white shadow-inner" style="background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');">
+        <h1 class="text-5xl md:text-7xl mb-4 italic">Dove la storia del territorio<br>diventa pagina.</h1>
+        <p class="text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            Recuperiamo la memoria, diamo voce agli emergenti, celebriamo l'identità locale attraverso l'arte del libro.
+        </p>
+        <button class="mt-8 px-8 py-3 bg-bordeaux text-white uppercase text-xs tracking-widest hover:bg-black transition">Scopri le Pubblicazioni</button>
+    </header>
+
+    <!-- Sezione Libri (Anteprima) -->
+    <section class="py-20 max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl text-center mb-12">Ultime Uscite</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Libro 1 -->
+            <div class="group cursor-pointer">
+                <div class="bg-gray-200 h-96 mb-4 shadow-xl group-hover:scale-105 transition-transform duration-300 flex items-center justify-center text-gray-400 italic">
+                    [Immagine Copertina]
+                </div>
+                <h3 class="text-xl mb-1">Titolo del Libro</h3>
+                <p class="text-sm text-gray-600 uppercase">Collana Saggistica</p>
+                <p class="mt-2 font-bold text-bordeaux italic">18,00 €</p>
+            </div>
+            <!-- Altri libri... -->
+        </div>
+    </section>
+
+    <!-- Sezione Identità -->
+    <section class="bg-bordeaux text-white py-20 px-10 text-center">
+        <h2 class="text-white text-4xl mb-6">Memoria e Territorio</h2>
+        <p class="max-w-3xl mx-auto leading-loose font-light">
+            La nostra missione è il recupero di opere dimenticate e la valorizzazione di autori che sanno raccontare l'anima dei nostri luoghi. Ogni pubblicazione è un atto d'amore per la cultura indipendente.
+        </p>
+    </section>
+
+    <footer class="py-10 text-center text-xs text-gray-400 uppercase tracking-widest">
+        &copy; 2024 Imago Artis Edizioni - imagoartisedizioni.it
+    </footer>
+
+</body>
+</html>
