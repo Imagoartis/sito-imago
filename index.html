@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imago Artis Edizioni | Catalogo</title>
+    <title>Imago Artis Edizioni | Custodi della Memoria</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -11,10 +11,30 @@
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .accent-color { color: #A30000; } 
         .bg-accent { background-color: #A30000; }
-        .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)); }
-        .book-card { transition: transform 0.3s ease; border: 1px solid #e5e7eb; padding: 15px; background: white; }
-        .book-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .book-placeholder { background: #eeece6; display: flex; align-items: center; justify-content: center; text-align: center; font-style: italic; padding: 20px; aspect-ratio: 2/3; color: #888; border: 1px solid #ddd; }
+        .book-card { transition: transform 0.3s ease; border: 1px solid #e5e7eb; padding: 15px; background: white; border-radius: 4px; position: relative; }
+        .book-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+        .book-placeholder { background: #f0eee9; display: flex; align-items: center; justify-content: center; text-align: center; font-style: italic; padding: 20px; aspect-ratio: 2/3; color: #888; border: 1px dashed #ccc; margin-bottom: 15px; }
+        
+        /* Stile speciale per il Codex */
+        .featured-codex { 
+            border: 3px solid #A30000 !important; 
+            background-color: #FFF9F9; 
+            box-shadow: 0 10px 30px rgba(163, 0, 0, 0.1);
+        }
+        .badge-unesco {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #A30000;
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -22,119 +42,141 @@
     <!-- Navigazione -->
     <nav class="p-4 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50 shadow-sm">
         <div class="flex items-center">
-            <img src="logo.png" alt="Imago Artis" class="h-12 md:h-16 w-auto">
+            <img src="logo.png" alt="Imago Artis Edizioni" class="h-12 md:h-16 w-auto">
         </div>
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
-            <a href="#catalogo" class="hover:text-red-700">Catalogo</a>
-            <a href="#progetto" class="hover:text-red-700">Il Progetto</a>
-            <a href="#" class="hover:text-red-700">Autori</a>
-            <a href="#" class="hover:text-red-700">Contatti</a>
+            <a href="#catalogo" class="hover:text-red-700 transition">Catalogo</a>
+            <a href="#missione" class="hover:text-red-700 transition">Missione</a>
+            <a href="#" class="hover:text-red-700 transition">Autori</a>
+            <a href="#" class="hover:text-red-700 transition">Contatti</a>
         </div>
-        <button class="bg-accent text-white px-5 py-2 text-sm uppercase font-bold shadow-md hover:bg-red-800 transition">Shop</button>
+        <button class="bg-accent text-white px-6 py-2 text-sm uppercase font-bold hover:bg-red-800 transition">Shop</button>
     </nav>
 
-    <!-- Hero -->
-    <section class="relative h-[50vh] flex items-center justify-center text-white overflow-hidden">
-        <div class="absolute inset-0 bg-stone-900">
-            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80" class="w-full h-full object-cover opacity-40">
-            <div class="absolute inset-0 hero-gradient"></div>
+    <!-- Testata -->
+    <section class="relative py-20 bg-stone-900 text-white text-center">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
         </div>
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-4xl md:text-6xl mb-4 italic">Le Nostre Edizioni</h1>
-            <p class="text-lg md:text-xl max-w-2xl mx-auto font-light">Dalla storia millenaria del Codex alla saggistica contemporanea.</p>
+        <div class="relative z-10 px-4">
+            <h1 class="text-5xl md:text-7xl mb-4 italic">Imago Artis Edizioni</h1>
+            <p class="text-xl max-w-2xl mx-auto font-light italic">Valorizzare la cultura del territorio, dare voce a scrittori emergenti.</p>
         </div>
     </section>
 
-    <!-- Catalogo Libri -->
+    <!-- Catalogo -->
     <section id="catalogo" class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-                <h2 class="text-3xl italic accent-color">Catalogo Opere</h2>
-                <p class="text-stone-500 mt-2">Esplora le nostre pubblicazioni tra storia, arte e cultura.</p>
-            </div>
-        </div>
-
-        <!-- Griglia Libri -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <h2 class="text-4xl text-center mb-16 italic accent-color text-stone-800">Le Nostre Pubblicazioni</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
             
+            <!-- LIBRO SPECIALE: IL CODEX (Highlight) -->
+            <div class="book-card featured-codex">
+                <div class="badge-unesco">Rilievo Internazionale</div>
+                <div class="book-placeholder" style="border-color: #A30000; color: #A30000;">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight accent-color">Il Codex Purpureus Rossanensis</h3>
+                <p class="text-stone-500 mt-2 italic">Franco Emilio Carlino</p>
+                <p class="text-xs mt-3 uppercase tracking-widest font-bold text-stone-400">Patrimonio Mondiale</p>
+            </div>
+
             <!-- Libro 1 -->
             <div class="book-card">
-                <div class="book-placeholder mb-4 text-xs">Copertina in arrivo</div>
-                <h3 class="font-bold text-base leading-tight">Rossano tra storia e bio-bibliografia</h3>
-                <p class="text-sm text-stone-500 mt-1">Franco Emilio Carlino</p>
-                <p class="mt-3 text-xs uppercase tracking-tighter text-stone-400">Saggistica</p>
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">Rossano tra storia e bio-bibliografia</h3>
+                <p class="text-stone-500 mt-2 italic">Franco Emilio Carlino</p>
             </div>
 
             <!-- Libro 2 -->
             <div class="book-card">
-                <div class="book-placeholder mb-4 text-xs">Copertina in arrivo</div>
-                <h3 class="font-bold text-base leading-tight">Mandatoriccio Storia di un feudo</h3>
-                <p class="text-sm text-stone-500 mt-1">Franco Emilio Carlino</p>
-                <p class="mt-3 text-xs uppercase tracking-tighter text-stone-400">Storia Locale</p>
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">Mandatoriccio Storia di un feudo</h3>
+                <p class="text-stone-500 mt-2 italic">Franco Emilio Carlino</p>
             </div>
 
             <!-- Libro 3 -->
             <div class="book-card">
-                <div class="book-placeholder mb-4 text-xs">Copertina in arrivo</div>
-                <h3 class="font-bold text-base leading-tight">Scuola - Il punto di vista</h3>
-                <p class="text-sm text-stone-500 mt-1">Franco Emilio Carlino</p>
-                <p class="mt-3 text-xs uppercase tracking-tighter text-stone-400">Saggistica</p>
-            </div>
-
-            <!-- Libro 4 -->
-            <div class="book-card">
-                <div class="book-placeholder mb-4 text-xs">Copertina in arrivo</div>
-                <h3 class="font-bold text-base leading-tight">Il Codex Purpureus Rossanensis</h3>
-                <p class="text-sm text-stone-500 mt-1">Franco Emilio Carlino</p>
-                <p class="mt-3 text-xs uppercase tracking-tighter text-stone-400">Arte / Storia</p>
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">Scuola - Il punto di vista</h3>
+                <p class="text-stone-500 mt-2 italic">Franco Emilio Carlino</p>
             </div>
 
             <!-- Libro 5 -->
-            <div class="book-card shadow-lg border-red-100">
-                <div class="book-placeholder mb-4 text-xs bg-red-50 text-red-800">Copertina in arrivo</div>
-                <h3 class="font-bold text-base leading-tight italic">Il Patire - Storia e colori</h3>
-                <p class="text-sm text-stone-500 mt-1">Giovanni Sapia</p>
-                <p class="mt-3 text-xs uppercase tracking-tighter text-stone-400 text-red-700">In Evidenza</p>
+            <div class="book-card">
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">Il Patire - Storia e colori</h3>
+                <p class="text-stone-500 mt-2 italic">Giovanni Sapia</p>
             </div>
 
             <!-- Libro 6 -->
             <div class="book-card">
-                <div class="book-placeholder mb-4 text-xs">Copertina in arrivo</div>
-                <h3 class="font-bold text-base leading-tight">L'Università Popolare di Rossano</h3>
-                <p class="text-sm text-stone-500 mt-1">Franco Emilio Carlino</p>
-                <p class="mt-3 text-xs uppercase tracking-tighter text-stone-400">Saggistica</p>
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">L'Università Popolare di Rossano</h3>
+                <p class="text-stone-500 mt-2 italic">Franco Emilio Carlino</p>
             </div>
 
             <!-- Libro 7 -->
             <div class="book-card">
-                <div class="book-placeholder mb-4 text-xs">Copertina in arrivo</div>
-                <h3 class="font-bold text-base leading-tight">Tusa dei Desideri</h3>
-                <p class="text-sm text-stone-500 mt-1">Gianfranco Labrosciano</p>
-                <p class="mt-3 text-xs uppercase tracking-tighter text-stone-400">Narrativa</p>
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">Tusa dei Desideri</h3>
+                <p class="text-stone-500 mt-2 italic">Gianfranco Labrosciano</p>
             </div>
 
             <!-- Libro 8 -->
             <div class="book-card">
-                <div class="book-placeholder mb-4 text-xs">Copertina in arrivo</div>
-                <h3 class="font-bold text-base leading-tight">I Me' Sonetti</h3>
-                <p class="text-sm text-stone-500 mt-1">Natale Cutrupi</p>
-                <p class="mt-3 text-xs uppercase tracking-tighter text-stone-400">Poesia</p>
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">I Me' Sonetti</h3>
+                <p class="text-stone-500 mt-2 italic">Natale Cutrupi</p>
             </div>
 
-            <!-- Aggiungi qui gli altri libri seguendo questo schema -->
+            <!-- Libro 9 -->
+            <div class="book-card">
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">Il Catechismo del Codex Purpureus</h3>
+                <p class="text-stone-500 mt-2 italic">Giovanni Sapia</p>
+            </div>
+
+            <!-- Libro 10 -->
+            <div class="book-card">
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">La Compassione dall'Alto della Croce</h3>
+                <p class="text-stone-500 mt-2 italic">Antonio di Nardo</p>
+            </div>
+
+            <!-- Libro 11 -->
+            <div class="book-card">
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">La Terra di Mormanno</h3>
+                <p class="text-stone-500 mt-2 italic">Francesco Regina</p>
+            </div>
+
+            <!-- Libro 12 -->
+            <div class="book-card">
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">Lettera a mio figlio sulla politica</h3>
+                <p class="text-stone-500 mt-2 italic">Giandonato Giordano</p>
+            </div>
+
+            <!-- Libro 13 -->
+            <div class="book-card">
+                <div class="book-placeholder">Copertina in arrivo</div>
+                <h3 class="font-bold text-lg leading-tight">Il Ben Ch'io vi Trovai</h3>
+                <p class="text-stone-500 mt-2 italic">Coriolano Martirano</p>
+            </div>
 
         </div>
-        
-        <div class="mt-12 text-center text-stone-400 italic text-sm">
-            E altri titoli in arrivo nel catalogo storico...
+    </section>
+
+    <!-- Missione -->
+    <section id="missione" class="bg-[#f4f1ea] py-20 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl mb-6 italic accent-color">La nostra Missione</h2>
+            <p class="text-lg leading-relaxed text-stone-700">
+                Recuperare e ripubblicare vecchie pubblicazioni e opere dimenticate legate alla storia locale. Crediamo che la memoria sia il fondamento su cui costruire il futuro della nostra comunità.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-stone-100 border-t border-stone-200 py-12 px-6 text-center">
-        <img src="logo.png" alt="Logo" class="h-10 mx-auto mb-6 opacity-80">
-        <p class="text-xs text-stone-400 uppercase tracking-[0.2em]">© Imago Artis Edizioni</p>
-    </footer>
-
-</body>
-</html>
+    <footer class="py-12 text-center border-t border-stone-200 bg-white">
+        <img src="logo.png" alt="Logo" class="h-12 mx-auto mb-4">
+        <p class="text-stone-400 text-sm italic">© Imago Artis Edizioni - imagoartised
