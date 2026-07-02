@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imago Artis Edizioni | Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Lora', serif; background-color: #FDFCF8; color: #2C2C2C; scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .accent-color { color: #A30000; } 
+        .bg-accent { background-color: #A30000; }
+        .book-card { transition: transform 0.3s ease; border: 1px solid #e5e7eb; padding: 15px; background: white; border-radius: 4px; position: relative; display: flex; flex-direction: column; height: 100%; }
+        .book-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+        .book-placeholder { background: #f0eee9; display: flex; align-items: center; justify-content: center; text-align: center; font-style: italic; padding: 20px; aspect-ratio: 2/3; color: #888; border: 1px dashed #ccc; margin-bottom: 15px; }
+        
+        .btn-buy { background-color: #A30000; color: white; padding: 8px; text-align: center; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .btn-buy:hover { background-color: #800000; }
+        .btn-wa { border: 1px solid #25D366; color: #25D366; padding: 8px; text-align: center; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; margin-top: 8px; }
+        .btn-wa:hover { background-color: #25D366; color: white; }
+
+        .featured-codex { border: 2px solid #C5A059 !important; background-color: #FFFDF5; }
+        .badge-unesco { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #C5A059; color: white; padding: 4px 15px; font-size: 0.7rem; text-transform: uppercase; font-weight: bold; border-radius: 20px; z-index: 10; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigazione -->
+    <nav class="p-4 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center">
+            <img src="logo.png" alt="Imago Artis Edizioni" class="h-12 md:h-16 w-auto">
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="#catalogo" class="hover:text-red-700 transition">Catalogo</a>
+            <a href="#territorio" class="hover:text-red-700 transition">Memoria</a>
+            <a href="#autori" class="hover:text-red-700 transition">Pubblica</a>
+        </div>
+        <a href="#catalogo" class="bg-accent text-white px-6 py-2 text-sm uppercase font-bold">Acquista Libri</a>
+    </nav>
+
+    <!-- Catalogo con pulsanti -->
+    <section id="catalogo" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl text-center mb-16 italic text-stone-800">Le Nostre Edizioni</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+            
+            <!-- LIBRO: IL CODEX -->
+            <div class="book-card featured-codex">
+                <div class="badge-unesco">Rilievo Internazionale</div>
+                <img src="04 Il Codex 01.jpg" alt="Il Codex Purpureus Rossanensis" class="aspect-[2/3] object-cover mb-4 shadow-md">
+                <h3 class="font-bold text-lg leading-tight accent-color">Il Codex Purpureus Rossanensis</h3>
+                <p class="text-stone-500 mt-2 mb-4 italic">Franco Emilio Carlino</p>
+                
+                <div class="mt-auto">
+                    <!-- Sostituisci i link # con i tuoi veri link -->
+                    <a href="https://paypal.me/TUOACCOUNT/35" target="_blank" class="btn-buy block">Acquista Ora (PayPal)</a>
+                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20il%20libro%20Codex%20Purpureus" class="btn-wa block">Ordina su WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- LIBRO: IL PATIRE -->
+            <div class="book-card">
+                <img src="05 Il Patire.jpg" alt="Il Patire - Storia e colori" class="aspect-[2/3] object-cover mb-4 shadow-md">
+                <h3 class="font-bold text-lg leading-tight">Il Patire - Storia e colori</h3>
+                <p class="text-stone-500 mt-2 mb-4 italic">Giovanni Sapia</p>
+                
+                <div class="mt-auto">
+                    <a href="#" class="btn-buy block italic">Prezzo: € 20,00</a>
+                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20info%20su%20Il%20Patire" class="btn-wa block text-center">Richiedi via WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- LIBRO: ROSSANO STORIA -->
+            <div class="book-card">
+                <img src="01 Rossano.jpg" alt="Rossano tra storia e bio-bibliografia" class="aspect-[2/3] object-cover mb-4 shadow-md">
+                <h3 class="font-bold text-lg leading-tight">Rossano tra storia e bio-bibliografia</h3>
+                <p class="text-stone-500 mt-2 mb-4 italic">Franco Emilio Carlino</p>
+                
+                <div class="mt-auto">
+                    <a href="#" class="btn-buy block">Acquista Online</a>
+                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20Rossano%20Storia" class="btn-wa block">Ordina su WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- LIBRO: MANDATORICCIO -->
+            <div class="book-card">
+                <img src="02 Mandatoriccio.jpg" alt="Mandatoriccio Storia di un feudo" class="aspect-[2/3] object-cover mb-4 shadow-md">
+                <h3 class="font-bold text-lg leading-tight">Mandatoriccio Storia di un feudo</h3>
+                <p class="text-stone-500 mt-2 mb-4 italic">Franco Emilio Carlino</p>
+                
+                <div class="mt-auto">
+                    <a href="#" class="btn-buy block">Acquista Online</a>
+                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20Mandatoriccio" class="btn-wa block">Ordina su WhatsApp</a>
+                </div>
+            </div>
+			
+			<!-- LIBRO: Tusa dei Desideri -->
+            <div class="book-card">
+                <img src="07 Tusa.jpg" alt="Tusa dei Desideri" class="aspect-[2/3] object-cover mb-4 shadow-md">
+                <h3 class="font-bold text-lg leading-tight">Tusa dei Desideri</h3>
+                <p class="text-stone-500 mt-2 mb-4 italic">Franco Emilio Carlino</p>
+                
+                <div class="mt-auto">
+                    <a href="#" class="btn-buy block">Acquista Online</a>
+                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20Mandatoriccio" class="btn-wa block">Ordina su WhatsApp</a>
+                </div>
+            </div>
+			
+			<!-- LIBRO: La Terra di Mormanno -->
+            <div class="book-card">
+                <img src="11 La terra.jpg" alt="La Terra di Mormanno" class="aspect-[2/3] object-cover mb-4 shadow-md">
+                <h3 class="font-bold text-lg leading-tight">La Terra di Mormanno</h3>
+                <p class="text-stone-500 mt-2 mb-4 italic">Francesco Regina</p>
+                
+                <div class="mt-auto">
+                    <a href="#" class="btn-buy block">Acquista Online</a>
+                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20Mandatoriccio" class="btn-wa block">Ordina su WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-12 text-stone-400 italic">Per ordini multipli o spedizioni estere, contattateci direttamente su WhatsApp.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t border-stone-200 bg-white">
+        <img src="logo.png" alt="Logo" class="h-12 mx-auto mb-4">
+        <p class="text-stone-400 text-sm italic">© Imago Artis Edizioni - Spedizioni in tutta Italia</p>
+    </footer>
+
+</body>
+</html>
