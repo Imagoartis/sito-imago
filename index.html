@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imago Artis Edizioni | Shop</title>
+    <title>Imago Artis Edizioni | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -11,121 +11,140 @@
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .accent-color { color: #A30000; } 
         .bg-accent { background-color: #A30000; }
-        .book-card { transition: transform 0.3s ease; border: 1px solid #e5e7eb; padding: 15px; background: white; border-radius: 4px; position: relative; display: flex; flex-direction: column; height: 100%; }
+        .book-card { transition: transform 0.3s ease; border: 1px solid #e5e7eb; padding: 15px; background: white; border-radius: 4px; display: flex; flex-direction: column; height: 100%; }
         .book-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
-        .book-placeholder { background: #f0eee9; display: flex; align-items: center; justify-content: center; text-align: center; font-style: italic; padding: 20px; aspect-ratio: 2/3; color: #888; border: 1px dashed #ccc; margin-bottom: 15px; }
-        
-        .btn-buy { background-color: #A30000; color: white; padding: 8px; text-align: center; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-        .btn-buy:hover { background-color: #800000; }
-        .btn-wa { border: 1px solid #25D366; color: #25D366; padding: 8px; text-align: center; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; margin-top: 8px; }
-        .btn-wa:hover { background-color: #25D366; color: white; }
-
-        .featured-codex { border: 2px solid #C5A059 !important; background-color: #FFFDF5; }
-        .badge-unesco { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #C5A059; color: white; padding: 4px 15px; font-size: 0.7rem; text-transform: uppercase; font-weight: bold; border-radius: 20px; z-index: 10; }
+        .book-img { aspect-ratio: 2/3; object-cover: cover; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .featured-codex { border: 2px solid #C5A059 !important; background-color: #FFFDF5; position: relative; }
     </style>
 </head>
 <body>
 
-    <!-- Navigazione -->
     <nav class="p-4 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50 shadow-sm">
-        <div class="flex items-center">
-            <img src="logo.png" alt="Imago Artis Edizioni" class="h-12 md:h-16 w-auto">
+        <div class="flex items-center"><a href="index.html"><img src="logo.png" alt="Imago Artis" class="h-12 md:h-16 w-auto"></a></div>
+        <div class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-bold">
+            <a href="index.html" class="accent-color">Home</a>
+            <a href="#catalogo" class="hover:text-red-700">Catalogo</a>
+            <a href="chi-siamo.html" class="hover:text-red-700">Chi Siamo</a>
+            <a href="autori.html" class="hover:text-red-700">Pubblica</a>
+            <a href="contatti.html" class="hover:text-red-700">Contatti</a>
         </div>
-        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
-            <a href="#catalogo" class="hover:text-red-700 transition">Catalogo</a>
-            <a href="#territorio" class="hover:text-red-700 transition">Memoria</a>
-            <a href="#autori" class="hover:text-red-700 transition">Pubblica</a>
-        </div>
-        <a href="#catalogo" class="bg-accent text-white px-6 py-2 text-sm uppercase font-bold">Acquista Libri</a>
+        <a href="https://wa.me/39...vostro_numero" class="bg-accent text-white px-4 py-2 text-xs uppercase font-bold">Ordina Libri</a>
     </nav>
 
-    <!-- Catalogo con pulsanti -->
-    <section id="catalogo" class="py-20 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl text-center mb-16 italic text-stone-800">Le Nostre Edizioni</h2>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+    <section id="catalogo" class="py-16 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl text-center mb-12 italic accent-color">Il Nostro Catalogo</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             
-            <!-- LIBRO: IL CODEX -->
+            <!-- 04. IL CODEX (Primo posto per importanza) -->
             <div class="book-card featured-codex">
-                <div class="badge-unesco">Rilievo Internazionale</div>
-                <img src="04 Il Codex 01.jpg" alt="Il Codex Purpureus Rossanensis" class="aspect-[2/3] object-cover mb-4 shadow-md">
-                <h3 class="font-bold text-lg leading-tight accent-color">Il Codex Purpureus Rossanensis</h3>
-                <p class="text-stone-500 mt-2 mb-4 italic">Franco Emilio Carlino</p>
-                
-                <div class="mt-auto">
-                    <!-- Sostituisci i link # con i tuoi veri link -->
-                    <a href="https://paypal.me/TUOACCOUNT/35" target="_blank" class="btn-buy block">Acquista Ora (PayPal)</a>
-                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20il%20libro%20Codex%20Purpureus" class="btn-wa block">Ordina su WhatsApp</a>
-                </div>
+                <img src="04%20Il%20Codex%2001.jpg" alt="Il Codex" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">Il Codex Purpureus Rossanensis</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Giovanni Sapia / F. E. Carlino</p>
+                <a href="libri/codex.html" class="mt-auto bg-stone-800 text-white text-center py-2 text-xs uppercase font-bold">Dettagli e Acquisto</a>
             </div>
 
-            <!-- LIBRO: IL PATIRE -->
+            <!-- 01. ROSSANO -->
             <div class="book-card">
-                <img src="05 Il Patire.jpg" alt="Il Patire - Storia e colori" class="aspect-[2/3] object-cover mb-4 shadow-md">
-                <h3 class="font-bold text-lg leading-tight">Il Patire - Storia e colori</h3>
-                <p class="text-stone-500 mt-2 mb-4 italic">Giovanni Sapia</p>
-                
-                <div class="mt-auto">
-                    <a href="#" class="btn-buy block italic">Prezzo: € 20,00</a>
-                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20info%20su%20Il%20Patire" class="btn-wa block text-center">Richiedi via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- LIBRO: ROSSANO STORIA -->
-            <div class="book-card">
-                <img src="01 Rossano.jpg" alt="Rossano tra storia e bio-bibliografia" class="aspect-[2/3] object-cover mb-4 shadow-md">
+                <img src="01%20Rossano.jpg" alt="Rossano" class="book-img">
                 <h3 class="font-bold text-lg leading-tight">Rossano tra storia e bio-bibliografia</h3>
-                <p class="text-stone-500 mt-2 mb-4 italic">Franco Emilio Carlino</p>
-                
-                <div class="mt-auto">
-                    <a href="#" class="btn-buy block">Acquista Online</a>
-                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20Rossano%20Storia" class="btn-wa block">Ordina su WhatsApp</a>
-                </div>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">F. E. Carlino</p>
+                <a href="libri/rossano.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
             </div>
 
-            <!-- LIBRO: MANDATORICCIO -->
+            <!-- 02. MANDATORICCIO -->
             <div class="book-card">
-                <img src="02 Mandatoriccio.jpg" alt="Mandatoriccio Storia di un feudo" class="aspect-[2/3] object-cover mb-4 shadow-md">
+                <img src="02%20Mandatoriccio.jpg" alt="Mandatoriccio" class="book-img">
                 <h3 class="font-bold text-lg leading-tight">Mandatoriccio Storia di un feudo</h3>
-                <p class="text-stone-500 mt-2 mb-4 italic">Franco Emilio Carlino</p>
-                
-                <div class="mt-auto">
-                    <a href="#" class="btn-buy block">Acquista Online</a>
-                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20Mandatoriccio" class="btn-wa block">Ordina su WhatsApp</a>
-                </div>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">F. E. Carlino</p>
+                <a href="libri/mandatoriccio.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
             </div>
-			
-			<!-- LIBRO: Tusa dei Desideri -->
+
+            <!-- 03. SCUOLA -->
             <div class="book-card">
-                <img src="07 Tusa.jpg" alt="Tusa dei Desideri" class="aspect-[2/3] object-cover mb-4 shadow-md">
+                <img src="03%20scuola.jpg" alt="Scuola" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">Scuola - Il punto di vista</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">F. E. Carlino</p>
+                <a href="libri/scuola.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
+            </div>
+
+            <!-- 05. IL PATIRE -->
+            <div class="book-card">
+                <img src="05%20Il%20Patire.jpg" alt="Il Patire" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">Il Patire - Storia e colori</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Giovanni Sapia</p>
+                <a href="libri/il-patire.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
+            </div>
+
+            <!-- 06. UNIVERSITA -->
+            <div class="book-card">
+                <img src="06%20Universita.jpg" alt="Universita" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">L'Università Popolare di Rossano</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">F. E. Carlino</p>
+                <a href="libri/universita.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
+            </div>
+
+            <!-- 07. TUSA -->
+            <div class="book-card">
+                <img src="07%20Tusa.jpg" alt="Tusa" class="book-img">
                 <h3 class="font-bold text-lg leading-tight">Tusa dei Desideri</h3>
-                <p class="text-stone-500 mt-2 mb-4 italic">Franco Emilio Carlino</p>
-                
-                <div class="mt-auto">
-                    <a href="#" class="btn-buy block">Acquista Online</a>
-                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20Mandatoriccio" class="btn-wa block">Ordina su WhatsApp</a>
-                </div>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Gianfranco Labrosciano</p>
+                <a href="libri/tusa.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
             </div>
-			
-			<!-- LIBRO: La Terra di Mormanno -->
+
+            <!-- 08. I ME SONETTI -->
             <div class="book-card">
-                <img src="11 La terra.jpg" alt="La Terra di Mormanno" class="aspect-[2/3] object-cover mb-4 shadow-md">
-                <h3 class="font-bold text-lg leading-tight">La Terra di Mormanno</h3>
-                <p class="text-stone-500 mt-2 mb-4 italic">Francesco Regina</p>
-                
-                <div class="mt-auto">
-                    <a href="#" class="btn-buy block">Acquista Online</a>
-                    <a href="https://wa.me/39INSERISCI_NUMERO?text=Vorrei%20ordinare%20Mandatoriccio" class="btn-wa block">Ordina su WhatsApp</a>
-                </div>
+                <img src="08%20I%20me%20sonetti.jpg" alt="Sonetti" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">I Me' Sonetti</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Natale Cutrupi</p>
+                <a href="libri/sonetti.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
             </div>
+
+            <!-- 09. IL CATECHISMO -->
+            <div class="book-card">
+                <img src="09%20Il%20catechismo.jpg" alt="Catechismo" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">Il Catechismo del Codex</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Giovanni Sapia</p>
+                <a href="libri/catechismo.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
+            </div>
+
+            <!-- 10. LA COMPASSIONE -->
+            <div class="book-card">
+                <img src="10%20La%20compassione.jpg" alt="Compassione" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">La Compassione dalla Croce</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Antonio di Nardo</p>
+                <a href="libri/compassione.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
+            </div>
+
+            <!-- 11. LA TERRA -->
+            <div class="book-card">
+                <img src="11%20La%20terra.jpg" alt="Terra" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">La Terra di Mormanno</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Francesco Regina</p>
+                <a href="libri/terra-mormanno.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
+            </div>
+
+            <!-- 12. LETTERA -->
+            <div class="book-card">
+                <img src="12%20Lettera.jpg" alt="Lettera" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">Lettera a mio figlio</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Giandonato Giordano</p>
+                <a href="libri/lettera.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
+            </div>
+
+            <!-- 13. IL BEN -->
+            <div class="book-card">
+                <img src="13%20Il%20ben.jpg" alt="Il Ben" class="book-img">
+                <h3 class="font-bold text-lg leading-tight">Il Ben Ch'io vi Trovai</h3>
+                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Coriolano Martirano</p>
+                <a href="libri/ben-trovai.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
+            </div>
+
         </div>
-        <p class="text-center mt-12 text-stone-400 italic">Per ordini multipli o spedizioni estere, contattateci direttamente su WhatsApp.</p>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 text-center border-t border-stone-200 bg-white">
-        <img src="logo.png" alt="Logo" class="h-12 mx-auto mb-4">
-        <p class="text-stone-400 text-sm italic">© Imago Artis Edizioni - Spedizioni in tutta Italia</p>
+    <footer class="bg-stone-900 text-white py-12 px-6 text-center">
+        <img src="logo.png" alt="Logo" class="h-12 mx-auto mb-4 brightness-0 invert">
+        <p class="text-sm text-stone-400 italic">Imago Artis Edizioni - Custodi della Memoria</p>
     </footer>
 
 </body>
