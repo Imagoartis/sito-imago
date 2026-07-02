@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(TITOLO LIBRO) | Imago Artis Edizioni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#FDFCF8] text-stone-900">
+    <nav class="p-6 border-b"><a href="../index.html" class="text-red-800 font-bold uppercase text-xs tracking-widest">← Torna al Catalogo</a></nav>
+
+    <main class="max-w-5xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-16 items-start">
+        <!-- Immagine (Cambia il nome del file .jpg qui sotto) -->
+        <div class="sticky top-24">
+            <img src="../(NOME_FILE_IMMAGINE.jpg)" alt="(TITOLO)" class="shadow-2xl border border-stone-200 w-full object-cover">
+        </div>
+
+        <!-- Dettagli -->
+        <div>
+            <h1 class="text-4xl font-serif italic mb-2 leading-tight">(TITOLO COMPLETO DEL LIBRO)</h1>
+            <p class="text-xl text-stone-500 italic mb-8 font-serif">di (AUTORE)</p>
+            
+            <div class="prose prose-stone mb-10 leading-relaxed text-justify">
+                <h3 class="text-xs uppercase tracking-widest font-bold text-stone-400 mb-4 border-b pb-2">Sinossi dell'opera</h3>
+                <p>(INSERISCI QUI LA DESCRIZIONE DEL LIBRO. Se non l'hai ora, scrivi "In arrivo...")</p>
+            </div>
+
+            <div class="bg-stone-50 p-8 border-stone-100 border mb-10">
+                <h3 class="text-xs uppercase tracking-widest font-bold text-stone-400 mb-4">Scheda Tecnica</h3>
+                <div class="grid grid-cols-2 gap-y-4 text-sm">
+                    <p class="text-stone-500 italic">Genere</p> <p class="font-bold text-stone-700">(Saggistica/Storia...)</p>
+                    <p class="text-stone-500 italic">Prezzo</p> <p class="font-bold text-red-800 text-lg">€ (PREZZO)</p>
+                    <p class="text-stone-500 italic">Spedizione</p> <p class="font-bold text-stone-700">Disponibile</p>
+                </div>
+            </div>
+
+            <!-- Shop -->
+            <div class="space-y-4">
+                <a href="https://paypal.me/imagoartis/(PREZZO)" class="block w-full bg-stone-900 text-white text-center py-4 font-bold uppercase tracking-widest hover:bg-red-800 transition shadow-lg">Acquista con PayPal</a>
+                <a href="https://wa.me/39...tuonumero?text=Vorrei%20ordinare%20il%20libro%20(TITOLO)" class="block w-full border-2 border-green-600 text-green-600 text-center py-4 font-bold uppercase tracking-widest hover:bg-green-600 hover:text-white transition">Ordina via WhatsApp</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t mt-20 text-center text-stone-400 text-xs uppercase tracking-widest">
+        Imago Artis Edizioni | imagoartisedizioni.it
+    </footer>
+</body>
+</html>
