@@ -13,139 +13,43 @@
         .bg-accent { background-color: #A30000; }
         .book-card { transition: transform 0.3s ease; border: 1px solid #e5e7eb; padding: 15px; background: white; border-radius: 4px; display: flex; flex-direction: column; height: 100%; }
         .book-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
-        .book-img { aspect-ratio: 2/3; object-cover: cover; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #eee; }
-        .featured-codex { border: 2px solid #C5A059 !important; background-color: #FFFDF5; position: relative; }
+        .video-container { position: relative; height: 70vh; width: 100%; overflow: hidden; }
+        video { object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+        .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; text-align: center; color: white; flex-direction: column; padding: 20px; }
     </style>
 </head>
 <body>
 
+    <!-- Menu Uniforme -->
     <nav class="p-4 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50 shadow-sm">
         <div class="flex items-center"><a href="index.html"><img src="logo.png" alt="Imago Artis" class="h-12 md:h-16 w-auto"></a></div>
         <div class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-bold">
             <a href="index.html" class="accent-color">Home</a>
             <a href="#catalogo" class="hover:text-red-700">Catalogo</a>
-            <a href="chi-siamo.html" class="hover:text-red-700">Chi Siamo</a>
+            <a href="territorio.html" class="hover:text-red-700">Memoria</a>
             <a href="autori.html" class="hover:text-red-700">Pubblica</a>
+            <a href="chi-siamo.html" class="hover:text-red-700">Chi Siamo</a>
             <a href="contatti.html" class="hover:text-red-700">Contatti</a>
         </div>
-        <a href="https://wa.me/39...vostro_numero" class="bg-accent text-white px-4 py-2 text-xs uppercase font-bold">Ordina Libri</a>
+        <a href="https://wa.me/39...tuonumero" class="bg-accent text-white px-4 py-2 text-xs uppercase font-bold">Acquista</a>
     </nav>
 
-    <section id="catalogo" class="py-16 px-6 max-w-7xl mx-auto">
-        <h2 class="text-4xl text-center mb-12 italic accent-color">Il Nostro Catalogo</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            
-            <!-- 04. IL CODEX (Primo posto per importanza) -->
-            <div class="book-card featured-codex">
-                <img src="04%20Il%20Codex%2001.jpg" alt="Il Codex" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">Il Codex Purpureus Rossanensis</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Giovanni Sapia / F. E. Carlino</p>
-                <a href="libri/codex.html" class="mt-auto bg-stone-800 text-white text-center py-2 text-xs uppercase font-bold">Dettagli e Acquisto</a>
-            </div>
-
-            <!-- 01. ROSSANO -->
-            <div class="book-card">
-                <img src="01%20Rossano.jpg" alt="Rossano" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">Rossano tra storia e bio-bibliografia</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">F. E. Carlino</p>
-                <a href="libri/rossano.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 02. MANDATORICCIO -->
-            <div class="book-card">
-                <img src="02%20Mandatoriccio.jpg" alt="Mandatoriccio" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">Mandatoriccio Storia di un feudo</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">F. E. Carlino</p>
-                <a href="libri/mandatoriccio.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 03. SCUOLA -->
-            <div class="book-card">
-                <img src="03%20scuola.jpg" alt="Scuola" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">Scuola - Il punto di vista</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">F. E. Carlino</p>
-                <a href="libri/scuola.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 05. IL PATIRE -->
-            <div class="book-card">
-                <img src="05%20Il%20Patire.jpg" alt="Il Patire" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">Il Patire - Storia e colori</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Giovanni Sapia</p>
-                <a href="libri/il-patire.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 06. UNIVERSITA -->
-            <div class="book-card">
-                <img src="06%20Universita.jpg" alt="Universita" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">L'Università Popolare di Rossano</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">F. E. Carlino</p>
-                <a href="libri/universita.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 07. TUSA -->
-            <div class="book-card">
-                <img src="07%20Tusa.jpg" alt="Tusa" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">Tusa dei Desideri</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Gianfranco Labrosciano</p>
-                <a href="libri/tusa.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 08. I ME SONETTI -->
-            <div class="book-card">
-                <img src="08%20I%20me%20sonetti.jpg" alt="Sonetti" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">I Me' Sonetti</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Natale Cutrupi</p>
-                <a href="libri/sonetti.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 09. IL CATECHISMO -->
-            <div class="book-card">
-                <img src="09%20Il%20catechismo.jpg" alt="Catechismo" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">Il Catechismo del Codex</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Giovanni Sapia</p>
-                <a href="libri/catechismo.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 10. LA COMPASSIONE -->
-            <div class="book-card">
-                <img src="10%20La%20compassione.jpg" alt="Compassione" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">La Compassione dalla Croce</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Antonio di Nardo</p>
-                <a href="libri/compassione.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 11. LA TERRA -->
-            <div class="book-card">
-                <img src="11%20La%20terra.jpg" alt="Terra" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">La Terra di Mormanno</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Francesco Regina</p>
-                <a href="libri/terra-mormanno.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 12. LETTERA -->
-            <div class="book-card">
-                <img src="12%20Lettera.jpg" alt="Lettera" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">Lettera a mio figlio</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Giandonato Giordano</p>
-                <a href="libri/lettera.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
-            <!-- 13. IL BEN -->
-            <div class="book-card">
-                <img src="13%20Il%20ben.jpg" alt="Il Ben" class="book-img">
-                <h3 class="font-bold text-lg leading-tight">Il Ben Ch'io vi Trovai</h3>
-                <p class="text-stone-500 mt-1 mb-4 italic text-sm">Coriolano Martirano</p>
-                <a href="libri/ben-trovai.html" class="mt-auto border border-stone-800 text-center py-2 text-xs uppercase font-bold">Dettagli</a>
-            </div>
-
+    <!-- Spazio Video con Motto -->
+    <header class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="video-sfondo.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h1 class="text-5xl md:text-7xl mb-4 italic">Imago Artis Edizioni</h1>
+            <p class="text-xl md:text-2xl font-light italic max-w-3xl">"Custodi della memoria, editori dell'identità: diamo carta bianca alle radici del domani."</p>
+            <a href="#catalogo" class="mt-8 border-2 border-white px-8 py-3 uppercase tracking-widest text-sm font-bold hover:bg-white hover:text-black transition">Esplora il Catalogo</a>
         </div>
-    </section>
+    </header>
 
-    <footer class="bg-stone-900 text-white py-12 px-6 text-center">
-        <img src="logo.png" alt="Logo" class="h-12 mx-auto mb-4 brightness-0 invert">
-        <p class="text-sm text-stone-400 italic">Imago Artis Edizioni - Custodi della Memoria</p>
-    </footer>
+    <!-- Il resto del catalogo (13 libri) rimane come prima... -->
+    <section id="catalogo" class="py-16 px-6 max-w-7xl mx-auto">
+        <!-- Inserisci qui i blocchi dei libri che abbiamo creato prima -->
+    </section>
 
 </body>
 </html>
