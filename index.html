@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imago Artis Edizioni | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Lora', serif; background-color: #FDFCF8; color: #2C2C2C; scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .accent-color { color: #A30000; } 
+        .bg-accent { background-color: #A30000; }
+        .book-card { transition: transform 0.3s ease; border: 1px solid #e5e7eb; padding: 15px; background: white; border-radius: 4px; display: flex; flex-direction: column; height: 100%; }
+        .book-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+        .video-container { position: relative; height: 70vh; width: 100%; overflow: hidden; }
+        video { object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+        .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; text-align: center; color: white; flex-direction: column; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Uniforme -->
+    <nav class="p-4 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center"><a href="index.html"><img src="logo.png" alt="Imago Artis" class="h-12 md:h-16 w-auto"></a></div>
+        <div class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-bold">
+            <a href="index.html" class="accent-color">Home</a>
+            <a href="#catalogo" class="hover:text-red-700">Catalogo</a>
+            <a href="territorio.html" class="hover:text-red-700">Memoria</a>
+            <a href="autori.html" class="hover:text-red-700">Pubblica</a>
+            <a href="chi-siamo.html" class="hover:text-red-700">Chi Siamo</a>
+            <a href="contatti.html" class="hover:text-red-700">Contatti</a>
+        </div>
+        <a href="https://wa.me/39...tuonumero" class="bg-accent text-white px-4 py-2 text-xs uppercase font-bold">Acquista</a>
+    </nav>
+
+    <!-- Spazio Video con Motto -->
+    <header class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="video-sfondo.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h1 class="text-5xl md:text-7xl mb-4 italic">Imago Artis Edizioni</h1>
+            <p class="text-xl md:text-2xl font-light italic max-w-3xl">"Custodi della memoria, editori dell'identità: diamo carta bianca alle radici del domani."</p>
+            <a href="#catalogo" class="mt-8 border-2 border-white px-8 py-3 uppercase tracking-widest text-sm font-bold hover:bg-white hover:text-black transition">Esplora il Catalogo</a>
+        </div>
+    </header>
+
+    <!-- Il resto del catalogo (13 libri) rimane come prima... -->
+    <section id="catalogo" class="py-16 px-6 max-w-7xl mx-auto">
+        <!-- Inserisci qui i blocchi dei libri che abbiamo creato prima -->
+    </section>
+
+</body>
+</html>
