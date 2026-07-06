@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imago Artis Edizioni | Eccellenza Editoriale</title>
+    <!-- Font di alta qualità -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bordeaux: #8B1A1A;
+            --oro: #C5A059;
+            --crema: #FDFCF8;
+            --carta: #f4f1ea;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--crema); 
+            color: #1a1a1a;
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* Texture carta sottile */
+        }
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        
+        /* Navbar Refined */
+        .nav-link { position: relative; transition: color 0.3s; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; background-color: var(--bordeaux); transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Hero Video & Motto */
+        .hero-section { position: relative; height: 85vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #000; }
+        .hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); opacity: 0.6; }
+        .hero-content { relative; z-index: 10; text-align: center; color: white; padding: 0 20px; }
+
+        /* Book Card Professional */
+        .book-card { 
+            background: white; 
+            border: 1px solid rgba(0,0,0,0.05); 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .book-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+        }
+        .book-shadow { box-shadow: 10px 10px 20px rgba(0,0,0,0.15); }
+        
+        .section-divider { width: 60px; height: 2px; background: var(--oro); margin: 20px auto; }
+        
+        /* Badge UNESCO */
+        .badge-gold {
+            background: linear-gradient(135deg, #C5A059 0%, #A67C37 100%);
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigazione Elegante -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex-shrink-0">
+                <img src="logo.png" alt="Imago Artis" class="h-12 md:h-14 w-auto">
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-10 text-[11px] uppercase tracking-[0.2em] font-semibold text-stone-500">
+                <a href="index.html" class="nav-link text-stone-900">Home</a>
+                <a href="#catalogo" class="nav-link">Catalogo</a>
+                <a href="territorio.html" class="nav-link">Memoria</a>
+                <a href="autori.html" class="nav-link">Pubblica con noi</a>
+                <a href="chi-siamo.html" class="nav-link">La Casa Editrice</a>
+                <a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+
+            <a href="#catalogo" class="bg-[#8B1A1A] text-white px-6 py-2.5 text-[10px] uppercase tracking-widest font-bold hover:bg-black transition-colors shadow-lg">
+                Shop Online
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero con Video e Motto Narrativo -->
+    <header class="hero-section">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="video-sfondo.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <span class="text-oro uppercase tracking-[0.4em] text-xs mb-4 block">Rossano • Calabria</span>
+            <h1 class="text-5xl md:text-8xl mb-6 italic leading-tight">Imago Artis Edizioni</h1>
+            <div class="section-divider"></div>
+            <p class="text-xl md:text-2xl font-light italic max-w-2xl mx-auto text-stone-200">
+                "Custodi della memoria, editori dell'identità: diamo carta bianca alle radici del domani."
+            </p>
+            <div class="mt-12">
+                <a href="#catalogo" class="inline-block border border-white/40 px-10 py-4 text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all">
+                    Scopri le Collezioni
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro Missione -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl italic mb-6">Un progetto di valore locale, con respiro universale.</h2>
+            <p class="text-lg text-stone-500 leading-relaxed font-light">
+                Dalla valorizzazione del <strong>Codex Purpureus Rossanensis</strong> al recupero di cronache dimenticate, la nostra casa editrice si impegna a trasformare la storia locale in un patrimonio condiviso.
+            </p>
+        </div>
+    </section>
+
+    <!-- Catalogo Libri -->
+    <section id="catalogo" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="flex items-center justify-between mb-16 border-b border-stone-200 pb-8">
+            <h2 class="text-4xl italic text-stone-800">Le Pubblicazioni</h2>
+            <span class="text-xs uppercase tracking-widest text-stone-400">13 Titoli in Catalogo</span>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-16">
+            
+            <!-- 04. IL CODEX (Primo posto per importanza) -->
+            <div class="group">
+                <div class="book-card p-4 relative h-full flex flex-col">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                        <span class="badge-gold">Patrimonio UNESCO</span>
+                    </div>
+                    <a href="libri/codex.html">
+                        <img src="04Codex.jpg" alt="Il Codex" class="w-full book-shadow mb-6 group-hover:opacity-90 transition">
+                    </a>
+                    <h3 class="font-bold text-xl mb-1 leading-tight text-stone-800">Il Codex Purpureus Rossanensis</h3>
+                    <p class="text-stone-400 text-sm italic mb-6">Giovanni Sapia / F. E. Carlino</p>
+                    <div class="mt-auto pt-4 flex justify-between items-center border-t border-stone-50">
+                        <span class="text-[#8B1A1A] font-bold">€ 35,00</span>
+                        <a href="libri/codex.html" class="text-[10px] uppercase font-bold tracking-widest border-b border-stone-800">Dettagli</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 01. ROSSANO -->
+            <div class="group">
+                <div class="book-card p-4 h-full flex flex-col">
+                    <a href="libri/rossano.html">
+                        <img src="01Rossano.jpg" alt="Rossano" class="w-full book-shadow mb-6">
+                    </a>
+                    <h3 class="font-bold text-xl mb-1 leading-tight text-stone-800">Rossano tra storia e bio-bibliografia</h3>
+                    <p class="text-stone-400 text-sm italic mb-6">Franco Emilio Carlino</p>
+                    <div class="mt-auto pt-4 flex justify-between items-center border-t border-stone-50">
+                        <span class="text-stone-400 text-xs">Saggistica</span>
+                        <a href="libri/rossano.html" class="text-[10px] uppercase font-bold tracking-widest border-b border-stone-800">Dettagli</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 05. IL PATIRE -->
+            <div class="group">
+                <div class="book-card p-4 h-full flex flex-col">
+                    <a href="libri/patire.html">
+                        <img src="05Patire.jpg" alt="Il Patire" class="w-full book-shadow mb-6">
+                    </a>
+                    <h3 class="font-bold text-xl mb-1 leading-tight text-stone-800">Il Patire - Storia e colori</h3>
+                    <p class="text-stone-400 text-sm italic mb-6">Giovanni Sapia</p>
+                    <div class="mt-auto pt-4 flex justify-between items-center border-t border-stone-50">
+                        <spa
