@@ -39,13 +39,15 @@
         <a href="https://wa.me/39...tuonumero" class="bg-accent text-white px-4 py-2 text-xs uppercase font-bold">Acquista</a>
     </nav>
 
-    <!-- Header con Video e Motto -->
+    <!-- Header con Video Ottimizzato -->
     <header class="video-container">
-        <video autoplay muted loop playsinline>
+        <!-- Ho aggiunto 'poster' e 'playsinline' -->
+        <video autoplay muted loop playsinline poster="04Codex.jpg">
             <source src="video-sfondo.mp4" type="video/mp4">
         </video>
-        <div class="overlay">
-            <h1 class="text-5xl md:text-7xl mb-4 italic">Imago Artis Edizioni</h1>
+        <!-- Overlay più chiaro (40% invece di 50%) -->
+        <div class="overlay bg-black/40">
+            <h1 class="text-5xl md:text-7xl mb-4 italic font-serif">Imago Artis Edizioni</h1>
             <p class="text-xl md:text-2xl font-light italic max-w-3xl">"Custodi della memoria, editori dell'identità: diamo carta bianca alle radici del domani."</p>
             <a href="#catalogo" class="mt-8 border-2 border-white px-8 py-3 uppercase tracking-widest text-sm font-bold hover:bg-white hover:text-black transition">Esplora il Catalogo</a>
         </div>
