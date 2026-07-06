@@ -8,22 +8,40 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#FDFCF8] text-stone-900">
-    <nav class="p-6 border-b"><a href="../index.html" class="text-red-800 font-bold uppercase text-xs tracking-widest">← Torna al Catalogo</a></nav>
-
+    <!-- Menu -->
+    <nav class="p-4 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center"><a href="../index.html"><img src="../logo.png" alt="Imago Artis" class="h-12 md:h-16 w-auto"></a></div>
+        <div class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-bold text-stone-600">
+            <a href="../index.html" class="accent-color">Home</a>
+            <a href="../#catalogo" class="hover:text-red-700">Catalogo</a>
+            <a href="../territorio.html" class="hover:text-red-700">Memoria</a>
+            <a href="../autori.html" class="hover:text-red-700">Pubblica</a>
+            <a href="../chi-siamo.html" class="hover:text-red-700">Chi Siamo</a>
+            <a href="../contatti.html" class="hover:text-red-700">Contatti</a>
+        </div>
+        <a href="https://wa.me/39...tuonumero" class="bg-accent text-white px-4 py-2 text-xs uppercase font-bold">Acquista</a>
+    </nav>
     <main class="max-w-5xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-16 items-start">
         <!-- Immagine (Cambia il nome del file .jpg qui sotto) -->
         <div class="sticky top-24">
-            <img src="../(NOME_FILE_IMMAGINE.jpg)" alt="(TITOLO)" class="shadow-2xl border border-stone-200 w-full object-cover">
+            <img src="../02Mandatoriccio.jpg" alt="Mandatoriccio Storia di un feudo" class="shadow-2xl border border-stone-200 w-full object-cover">
         </div>
 
         <!-- Dettagli -->
         <div>
-            <h1 class="text-4xl font-serif italic mb-2 leading-tight">(TITOLO COMPLETO DEL LIBRO)</h1>
-            <p class="text-xl text-stone-500 italic mb-8 font-serif">di (AUTORE)</p>
+            <h1 class="text-4xl font-serif italic mb-2 leading-tight">Mandatoriccio Storia di un feudo</h1>
+            <p class="text-xl text-stone-500 italic mb-8 font-serif">di Franco Emilio Carlino</p>
             
             <div class="prose prose-stone mb-10 leading-relaxed text-justify">
                 <h3 class="text-xs uppercase tracking-widest font-bold text-stone-400 mb-4 border-b pb-2">Sinossi dell'opera</h3>
-                <p>(INSERISCI QUI LA DESCRIZIONE DEL LIBRO. Se non l'hai ora, scrivi "In arrivo...")</p>
+                <p> L'opera è un volume dettagliato di 287 pagine ricco di illustrazioni storiche e documentali, incentrato sulle origini e sull'evoluzione del comune calabrese di Mandatoriccio (in provincia di Cosenza).
+                    I temi principali dell'opera
+                    Il libro analizza cronologicamente la storia del territorio in un arco temporale che va dal 1619 fino all'Unità d'Italia (1860), soffermandosi in particolare su:
+                    La nascita del casale: La fondazione del borgo intorno al 1634 per opera del nobile rossanese Teodoro Dionigi Mandatoriccio (primo duca di Crosia), che risistemò un vasto latifondo costruendovi il castello feudale.
+                    I passaggi dinastici e nobiliari: Lo studio ricostruisce i legami genealogici e i passaggi di proprietà del feudo, partendo dal Casato dei Mandatoriccio di Rossano, attraversando la blasonata famiglia dei Sambiase di Cosenza, fino ad arrivare ai Toscano-Mandatoriccio.
+                    L'aspetto artistico e archeologico: Un intero capitolo è dedicato all'analisi delle ricchezze architettoniche e dei reperti storici presenti nell'area comunale per valorizzarne il patrimonio culturale.
+                    Il contesto sociale: Il testo esamina le condizioni socio-economiche della comunità operosa e le ripercussioni sul territorio delle trasformazioni politiche pre e post-unitarie.
+</p>
             </div>
 
             <div class="bg-stone-50 p-8 border-stone-100 border mb-10">
