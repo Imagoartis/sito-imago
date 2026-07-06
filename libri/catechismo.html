@@ -8,22 +8,40 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#FDFCF8] text-stone-900">
-    <nav class="p-6 border-b"><a href="../index.html" class="text-red-800 font-bold uppercase text-xs tracking-widest">← Torna al Catalogo</a></nav>
-
+    <!-- Menu -->
+    <nav class="p-4 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center"><a href="../index.html"><img src="../logo.png" alt="Imago Artis" class="h-12 md:h-16 w-auto"></a></div>
+        <div class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-bold text-stone-600">
+            <a href="../index.html" class="accent-color">Home</a>
+            <a href="../#catalogo" class="hover:text-red-700">Catalogo</a>
+            <a href="../territorio.html" class="hover:text-red-700">Memoria</a>
+            <a href="../autori.html" class="hover:text-red-700">Pubblica</a>
+            <a href="../chi-siamo.html" class="hover:text-red-700">Chi Siamo</a>
+            <a href="../contatti.html" class="hover:text-red-700">Contatti</a>
+        </div>
+        <a href="https://wa.me/39...tuonumero" class="bg-accent text-white px-4 py-2 text-xs uppercase font-bold">Acquista</a>
+    </nav>
     <main class="max-w-5xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-16 items-start">
         <!-- Immagine (Cambia il nome del file .jpg qui sotto) -->
         <div class="sticky top-24">
-            <img src="../(NOME_FILE_IMMAGINE.jpg)" alt="(TITOLO)" class="shadow-2xl border border-stone-200 w-full object-cover">
+            <img src="../09Catechismo.jpg)" alt="Il Catechismo del Codex Purpureus Rossanensis" class="shadow-2xl border border-stone-200 w-full object-cover">
         </div>
 
         <!-- Dettagli -->
         <div>
-            <h1 class="text-4xl font-serif italic mb-2 leading-tight">(TITOLO COMPLETO DEL LIBRO)</h1>
+            <h1 class="text-4xl font-serif italic mb-2 leading-tight">Il Catechismo del Codex Purpureus Rossanensis</h1>
             <p class="text-xl text-stone-500 italic mb-8 font-serif">di (AUTORE)</p>
             
             <div class="prose prose-stone mb-10 leading-relaxed text-justify">
                 <h3 class="text-xs uppercase tracking-widest font-bold text-stone-400 mb-4 border-b pb-2">Sinossi dell'opera</h3>
-                <p>(INSERISCI QUI LA DESCRIZIONE DEL LIBRO. Se non l'hai ora, scrivi "In arrivo...")</p>
+                <p>Il catechismo del Codex Purpureus Rossanensis", un volume collettaneo curato dallo storico e professore Giovanni Sapia e pubblicato nel 2017 in collaborazione tra l'Università Popolare "Ida Montalti Sapia" di Rossano e la casa editrice Imago Artis Edizioni. 
+                    Il testo nasce dal contributo dei membri del consiglio dell'ateneo popolare rossanese e da autorevoli studiosi della materia.
+                    I temi principali dell'opera
+                    Esegesi e Lettura Spirituale: A differenza dei testi prettamente bibliografici o tecnici, questo volume affronta il celebre Codex Purpureus Rossanensis (il prezioso evangeliario bizantino del VI secolo Patrimonio UNESCO) attraverso una chiave di lettura teologica, simbolica e catechetica.
+                    Il Valore delle Miniature: L'opera approfondisce i messaggi dottrinali racchiusi nelle quattordici splendide miniature dell'antico codice, analizzando come le immagini fungessero da vero e proprio "catechismo visivo" per i fedeli del tempo.
+                    Ponte Culturale: Il saggio mette in luce la figura storica del manoscritto come straordinario punto d'incontro spirituale e artistico tra la civiltà greco-orientale e quella latino-occidentale nel cuore della Calabria.
+                    La Copertina: Lo sfondo riproduce integralmente una delle pagine dipinte più emblematiche del codice miniato. L'illustrazione mostra la figura monumentale di Gesù Cristo sulla sinistra, avvolto in vesti dorate con l'aureola, mentre si rivolge a un gruppo di discepoli e fedeli seduti dinanzi a lui, fedelmente riprodotta dai fogli originali in pergamena purpurina.
+    </p>
             </div>
 
             <div class="bg-stone-50 p-8 border-stone-100 border mb-10">
