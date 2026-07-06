@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(TITOLO LIBRO) | Imago Artis Edizioni</title>
+    <title>Scuola - Il punto di vista | Imago Artis Edizioni</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#FDFCF8] text-stone-900">
-    <nav class="p-6 border-b"><a href="../index.html" class="text-red-800 font-bold uppercase text-xs tracking-widest">← Torna al Catalogo</a></nav>
-
+    <!-- Menu -->
+    <nav class="p-4 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center"><a href="../index.html"><img src="../logo.png" alt="Imago Artis" class="h-12 md:h-16 w-auto"></a></div>
+        <div class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-bold text-stone-600">
+            <a href="../index.html" class="accent-color">Home</a>
+            <a href="../#catalogo" class="hover:text-red-700">Catalogo</a>
+            <a href="../territorio.html" class="hover:text-red-700">Memoria</a>
+            <a href="../autori.html" class="hover:text-red-700">Pubblica</a>
+            <a href="../chi-siamo.html" class="hover:text-red-700">Chi Siamo</a>
+            <a href="../contatti.html" class="hover:text-red-700">Contatti</a>
+        </div>
+        <a href="https://wa.me/39...tuonumero" class="bg-accent text-white px-4 py-2 text-xs uppercase font-bold">Acquista</a>
+    </nav>
     <main class="max-w-5xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-16 items-start">
         <!-- Immagine (Cambia il nome del file .jpg qui sotto) -->
         <div class="sticky top-24">
-            <img src="../(NOME_FILE_IMMAGINE.jpg)" alt="(TITOLO)" class="shadow-2xl border border-stone-200 w-full object-cover">
+            <img src="../03Scuola.jpg" alt="Scuola - Il punto di vista" class="shadow-2xl border border-stone-200 w-full object-cover">
         </div>
 
         <!-- Dettagli -->
         <div>
-            <h1 class="text-4xl font-serif italic mb-2 leading-tight">(TITOLO COMPLETO DEL LIBRO)</h1>
-            <p class="text-xl text-stone-500 italic mb-8 font-serif">di (AUTORE)</p>
+            <h1 class="text-4xl font-serif italic mb-2 leading-tight">Scuola - Il punto di vista</h1>
+            <p class="text-xl text-stone-500 italic mb-8 font-serif">di Franco Emilio Carlino</p>
             
             <div class="prose prose-stone mb-10 leading-relaxed text-justify">
                 <h3 class="text-xs uppercase tracking-widest font-bold text-stone-400 mb-4 border-b pb-2">Sinossi dell'opera</h3>
-                <p>(INSERISCI QUI LA DESCRIZIONE DEL LIBRO. Se non l'hai ora, scrivi "In arrivo...")</p>
+                <p>"Scuola: il punto di vista (Problematiche, interrogativi, considerazioni)", un saggio saggistico ed educativo scritto dal ricercatore ed ex docente Franco Emilio Carlino e pubblicato nel 2015 dalla casa editrice Imago Artis Edizioni.
+                    Il volume ha una lunghezza di 176 pagine e approfondisce la realtà del sistema scolastico attraverso una prospettiva pedagogica e sociale legata al territorio calabrese.
+                    I temi principali dell'opera
+                    Origine dei testi: Il libro raccoglie una selezione di articoli specialistici originariamente estratti e pubblicati tra il 2000 e il 2008 all'interno di "Camminare insieme", il quindicinale ufficiale dell'Arcidiocesi di Rossano-Cariati.
+                    Analisi della normativa: L'autore esamina l'evoluzione delle riforme e della nuova normativa scolastica italiana di quegli anni, mettendone in luce le sfide quotidiane per il personale docente e per le istituzioni.
+                    Valori fondanti: Al centro delle riflessioni vi è la salvaguardia del valore della persona e la valorizzazione del patrimonio religioso-culturale nell'educazione dei giovani.
+                    Obiettivo sociale: L'opera propone modelli per favorire l'inserimento attivo, consapevole e produttivo degli studenti all'interno della società democratica.</p>
             </div>
 
             <div class="bg-stone-50 p-8 border-stone-100 border mb-10">
@@ -38,7 +55,7 @@
             <!-- Shop -->
             <div class="space-y-4">
                 <a href="https://paypal.me/imagoartis/(PREZZO)" class="block w-full bg-stone-900 text-white text-center py-4 font-bold uppercase tracking-widest hover:bg-red-800 transition shadow-lg">Acquista con PayPal</a>
-                <a href="https://wa.me/39...tuonumero?text=Vorrei%20ordinare%20il%20libro%20(TITOLO)" class="block w-full border-2 border-green-600 text-green-600 text-center py-4 font-bold uppercase tracking-widest hover:bg-green-600 hover:text-white transition">Ordina via WhatsApp</a>
+                <a href="https://wa.me/39...tuonumero?text=Vorrei%20ordinare%20il%20libro%20Scuola - Il punto di vista - di Franco Emilio Carlino" class="block w-full border-2 border-green-600 text-green-600 text-center py-4 font-bold uppercase tracking-widest hover:bg-green-600 hover:text-white transition">Ordina via WhatsApp</a>
             </div>
         </div>
     </main>
