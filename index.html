@@ -9,59 +9,21 @@
     <style>
         :root { --bordeaux: #8B1A1A; --oro: #C5A059; --crema: #FDFCF8; }
         body { font-family: 'Inter', sans-serif; background-color: var(--crema); color: #1a1a1a; background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); }
-        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
         
-        /* Menu Corretto */
-        .nav-link { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; transition: 0.3s; color: #444; }
+        .nav-link { font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; transition: 0.3s; color: #444; }
         .nav-link:hover { color: var(--bordeaux); }
 
-        /* Video Header */
         .video-container { position: relative; height: 80vh; width: 100%; overflow: hidden; background: #000; }
         video { object-fit: cover; width: 100%; height: 100%; position: absolute; opacity: 0.6; }
         .hero-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; color: white; flex-direction: column; padding: 20px; z-index: 10; }
 
         .book-card { background: white; transition: 0.4s; border: 1px solid rgba(0,0,0,0.05); height: 100%; display: flex; flex-direction: column; }
         .book-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .book-img { aspect-ratio: 2/3; width: 100%; object-fit: cover; margin-bottom: 15px; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
 
-    <!-- Navigazione Professionale -->
-    <nav class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex-shrink-0">
-                <img src="logo.png" alt="Imago Artis" class="h-12 md:h-14 w-auto">
-            </a>
-            
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="index.html" class="nav-link text-red-800 border-b-2 border-red-800">Home</a>
-                
-                <!-- Dropdown Collane -->
-                <div class="group relative">
-                    <button class="nav-link flex items-center gap-1">Le Collane <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-                    <div class="absolute hidden group-hover:block bg-white border border-stone-100 shadow-2xl p-5 w-56 mt-0">
-                        <a href="#memoria" class="block py-2 text-xs uppercase tracking-widest hover:text-red-800">Memoria e Territorio</a>
-                        <a href="#incipit" class="block py-2 text-xs uppercase tracking-widest hover:text-red-800 border-t mt-2 pt-2">Narrativa Incipit</a>
-                        <a href="#aurea" class="block py-2 text-xs uppercase tracking-widest hover:text-red-800 border-t mt-2 pt-2">Arte e Grandi Formati</a>
-                    </div>
-                </div>
-
-                <a href="autori.html" class="nav-link">Manoscritti</a>
-                <a href="chi-siamo.html" class="nav-link">La Casa Editrice</a>
-                <a href="contatti.html" class="nav-link">Contatti</a>
-            </div>
-
-            <a href="https://wa.me/39..." class="bg-[#8B1A1A] text-white px-6 py-2.5 text-xs uppercase tracking-widest font-bold shadow-lg hover:bg-black transition">
-                Shop Online
-            </a>
-        </div>
-    </nav>
-
-    <!-- Hero con Video -->
-    <header class="video-container">
-        <video autoplay muted loop playsinline poster="04Codex.jpg">
-            <source src="video-sfondo.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay">
-            <span class="text-oro uppercase tracking-[0.4em] text-sm mb-4">Rossano • Calabria</span>
-            <h1 class="text-5xl md:text-8xl italic mb-6 leading-tight">Imago Artis Edizioni<
+    <!-- Navigazione -->
+    <nav class="bg-white/95 backdrop-blur-md stick
