@@ -3,27 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(TITOLO LIBRO) | Imago Artis Edizioni</title>
+    <title>(L'Università Popolare di Rossano | Imago Artis Edizioni</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#FDFCF8] text-stone-900">
-    <nav class="p-6 border-b"><a href="../index.html" class="text-red-800 font-bold uppercase text-xs tracking-widest">← Torna al Catalogo</a></nav>
-
+    <!-- Menu -->
+    <nav class="p-4 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center"><a href="../index.html"><img src="../logo.png" alt="Imago Artis" class="h-12 md:h-16 w-auto"></a></div>
+        <div class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-bold text-stone-600">
+            <a href="../index.html" class="accent-color">Home</a>
+            <a href="../#catalogo" class="hover:text-red-700">Catalogo</a>
+            <a href="../territorio.html" class="hover:text-red-700">Memoria</a>
+            <a href="../autori.html" class="hover:text-red-700">Pubblica</a>
+            <a href="../chi-siamo.html" class="hover:text-red-700">Chi Siamo</a>
+            <a href="../contatti.html" class="hover:text-red-700">Contatti</a>
+        </div>
+        <a href="https://wa.me/39...tuonumero" class="bg-accent text-white px-4 py-2 text-xs uppercase font-bold">Acquista</a>
+    </nav>
     <main class="max-w-5xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-16 items-start">
         <!-- Immagine (Cambia il nome del file .jpg qui sotto) -->
         <div class="sticky top-24">
-            <img src="../(NOME_FILE_IMMAGINE.jpg)" alt="(TITOLO)" class="shadow-2xl border border-stone-200 w-full object-cover">
+            <img src="../06Universita.jpg" alt="L'Università Popolare di Rossano" class="shadow-2xl border border-stone-200 w-full object-cover">
         </div>
 
         <!-- Dettagli -->
         <div>
-            <h1 class="text-4xl font-serif italic mb-2 leading-tight">(TITOLO COMPLETO DEL LIBRO)</h1>
-            <p class="text-xl text-stone-500 italic mb-8 font-serif">di (AUTORE)</p>
+            <h1 class="text-4xl font-serif italic mb-2 leading-tight">L'Università Popolare di Rossano</h1>
+            <p class="text-xl text-stone-500 italic mb-8 font-serif">di Franco Emilio Carlino</p>
             
             <div class="prose prose-stone mb-10 leading-relaxed text-justify">
                 <h3 class="text-xs uppercase tracking-widest font-bold text-stone-400 mb-4 border-b pb-2">Sinossi dell'opera</h3>
-                <p>(INSERISCI QUI LA DESCRIZIONE DEL LIBRO. Se non l'hai ora, scrivi "In arrivo...")</p>
+                <p> "L'Università Popolare di Rossano. Cronologia degli argomenti trattati (MCMLXXXI-MMXVI)", un saggio saggistico e documentaristico scritto dal ricercatore e storico Franco Emilio Carlino e pubblicato nel 2017 dalla casa editrice Imago Artis Edizioni.
+                    Il volume conta 272 pagine ed è stato stampato come opera celebrativa in occasione del prestigioso traguardo dei 35 anni di attività dell'istituto rossanese.
+                    I temi principali dell'opera
+                    Memoria Storica dell'Istituto: Il testo ricostruisce minuziosamente la storia dell'Università Popolare "Ida Montalti Sapia" di Rossano, polo culturale fondamentale per la Sila Greca e l'hinterland ionico, ripercorrendo le attività dal 1981 al 2016.
+                    Cronologia Didattica: Il nucleo dell'opera raccoglie l'elenco cronologico di tutte le lezioni, le conferenze, i dibattiti e i corsi tematici che si sono succeduti nel corso di oltre tre decenni.Antologia Documentale: 
+                    Il saggio include un ricco apparato visivo composto da riproduzioni di locandine d'epoca, fotografie storiche degli eventi, interventi integrali dei relatori e commenti scritti da parte dei vari componenti dell'ateneo popolare.
+                    L'immagine in Copertina: La sezione centrale mostra il dettaglio di una mappa geografica d'epoca incentrata sul territorio costiero e collinare calabrese. 
+                    Vi si leggono chiaramente i toponimi storici di Rossano, Crosia e del torrente Trionto, delineando visivamente l'area geografica di riferimento su cui l'istituto ha riversato la propria opera di divulgazione.
+</p>
             </div>
 
             <div class="bg-stone-50 p-8 border-stone-100 border mb-10">
@@ -38,7 +57,7 @@
             <!-- Shop -->
             <div class="space-y-4">
                 <a href="https://paypal.me/imagoartis/(PREZZO)" class="block w-full bg-stone-900 text-white text-center py-4 font-bold uppercase tracking-widest hover:bg-red-800 transition shadow-lg">Acquista con PayPal</a>
-                <a href="https://wa.me/39...tuonumero?text=Vorrei%20ordinare%20il%20libro%20(TITOLO)" class="block w-full border-2 border-green-600 text-green-600 text-center py-4 font-bold uppercase tracking-widest hover:bg-green-600 hover:text-white transition">Ordina via WhatsApp</a>
+                <a href="https://wa.me/39...tuonumero?text=Vorrei%20ordinare%20il%20libro%20L'Università Popolare di Rossano - di Franco Emilio Carlino" class="block w-full border-2 border-green-600 text-green-600 text-center py-4 font-bold uppercase tracking-widest hover:bg-green-600 hover:text-white transition">Ordina via WhatsApp</a>
             </div>
         </div>
     </main>
