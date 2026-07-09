@@ -27,6 +27,20 @@
         .book-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
         .book-img { aspect-ratio: 2/3; width: 100%; object-fit: cover; margin-bottom: 20px; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); }
         .codex-highlight { background-color: #f9f7f2; border-top: 1px solid #e5e0d5; border-bottom: 1px solid #e5e0d5; }
+		
+		/* Effetto dissolvenza per il video */
+        video {
+            animation: fadeInVideo 2s ease-in-out;
+        }
+
+        @keyframes fadeInVideo {
+            from { opacity: 0; }
+            to { opacity: 0.75; }
+        }
+
+        /* Assicuriamoci che il poster sia centrato come il video */
+        .video-container { background-image: url('04Codex.jpg'); background-size: cover; background-position: center; }
+		
     </style>
 </head>
 <body>
@@ -60,11 +74,12 @@
 
     <!-- HEADER VIDEO -->
     <header class="video-container">
-        <video autoplay muted loop playsinline poster="04Codex.jpg">
+        <!-- Rimosso poster da qui per evitare il salto visivo, gestito ora dal CSS sopra -->
+        <video autoplay muted loop playsinline class="hero-video">
             <source src="video-sfondo.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay">
-            <span class="text-oro uppercase tracking-[0.4em] text-xs mb-4 font-bold">Rossano • Calabria</span>
+            <span class="text-oro uppercase tracking-[0.4em] text-sm mb-4 font-bold">Rossano • Calabria</span>
             <h1 class="text-5xl md:text-8xl italic mb-6 font-serif">Imago Artis Edizioni</h1>
             <p class="text-xl md:text-3xl font-light italic max-w-3xl">"Custodi della memoria, editori dell'identità: diamo carta bianca alle radici del domani."</p>
             <a href="#catalogo" class="mt-10 border-2 border-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Esplora il Catalogo</a>
@@ -166,12 +181,12 @@
                 <p class="text-stone-800 text-sm leading-relaxed font-serif italic space-y-2">
                     <span class="block">Rossano (CS) - Calabria</span>
                     <span class="block">info@imagoartisedizioni.it</span>
-                    <span class="block mt-4 text-stone-600 font-sans text-xs uppercase tracking-widest font-bold">P.IVA 01234567890</span>
+                    <span class="block mt-4 text-stone-600 font-sans text-xs uppercase tracking-widest font-bold">P.IVA 03326490780</span>
                 </p>
             </div>
         </div>
         <div class="max-w-7xl mx-auto border-t border-stone-100 mt-20 pt-10 text-center">
-            <p class="text-stone-500 text-[10px] uppercase tracking-[0.3em] font-bold italic">Imago Artis Edizioni © 2024</p>
+            <p class="text-stone-500 text-[10px] uppercase tracking-[0.3em] font-bold italic">Imago Artis Edizioni © 2026</p>
         </div>
     </footer>
 
